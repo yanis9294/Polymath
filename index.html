@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Polymath">
+  <meta name="description" content="Application PWA gamifiée pour apprendre la culture générale et la finance quantitative.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Polymath — Culture & Quant</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <div class="brand">
+        <span class="brand-mark">P</span>
+        <span>POLYMATH</span>
+      </div>
+      <button class="icon-btn" id="searchBtn" aria-label="Rechercher">⌕</button>
+    </header>
+
+    <main id="view" class="view"></main>
+
+    <nav class="bottom-nav" aria-label="Navigation">
+      <button data-route="home" class="nav-item active"><span>⌂</span><small>Accueil</small></button>
+      <button data-route="explore" class="nav-item"><span>◈</span><small>Explorer</small></button>
+      <button data-route="feed" class="nav-item"><span>▶</span><small>Connaissance</small></button>
+      <button data-route="review" class="nav-item"><span>↻</span><small>Réviser</small></button>
+      <button data-route="stats" class="nav-item"><span>◒</span><small>Stats</small></button>
+      <button data-route="profile" class="nav-item"><span>◎</span><small>Profil</small></button>
+    </nav>
+
+    <div id="modalRoot"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script>
+    window.KATEX_CSS = "https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"></script>
+  <script defer src="index.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
